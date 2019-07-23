@@ -20,13 +20,13 @@ final _random = math.Random();
 final _randomPieceSize = () => _random.nextInt(4).toDouble() + 4;
 final _randomCornerSize = () => _random.nextInt(3).toDouble();
 final _randomDecoration = () => BoxDecoration(
-      borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(_randomCornerSize()),
-        topRight: Radius.circular(_randomCornerSize()),
-        bottomLeft: Radius.circular(_randomCornerSize()),
-        bottomRight: Radius.circular(_randomCornerSize()),
-      ),
-    );
+  borderRadius: BorderRadius.only(
+    topLeft: Radius.circular(_randomCornerSize()),
+    topRight: Radius.circular(_randomCornerSize()),
+    bottomLeft: Radius.circular(_randomCornerSize()),
+    bottomRight: Radius.circular(_randomCornerSize()),
+  ),
+);
 
 class GlitterApp extends StatelessWidget {
   @override
@@ -127,11 +127,11 @@ class _GlitterState extends State<Glitter> with TickerProviderStateMixin {
     final customController = _controllers[_random.nextInt(5)];
 
     final colorTween =
-        ColorTween(begin: _getRandomColor(), end: Colors.transparent);
+    ColorTween(begin: _getRandomColor(), end: Colors.transparent);
     final tweenAnimation = colorTween.animate(customController);
 
     final positionAnimation =
-        CurveTween(curve: ElasticInCurve()).animate(customController);
+    CurveTween(curve: ElasticInCurve()).animate(customController);
 
     final pieceSize = _randomPieceSize();
 
@@ -150,7 +150,7 @@ class _GlitterState extends State<Glitter> with TickerProviderStateMixin {
         return Positioned(
           top: topOffset + (positionAnimation.value * _random.nextInt(30) - 15),
           left:
-              leftOffset + (positionAnimation.value * _random.nextInt(30) - 15),
+          leftOffset + (positionAnimation.value * _random.nextInt(30) - 15),
           //          bottom: (positionAnimation.value * _random.nextInt(15)),
 //          right: (positionAnimation.value * _random.nextInt(15)),
           child: piece,
@@ -164,7 +164,7 @@ class _GlitterState extends State<Glitter> with TickerProviderStateMixin {
     final customController = _controllers[_random.nextInt(5)];
 
     final colorTween =
-        ColorTween(begin: Colors.transparent, end: _getRandomColor());
+    ColorTween(begin: Colors.transparent, end: _getRandomColor());
     final animation = colorTween.animate(customController);
     final pieceSize = _randomPieceSize();
     final piece = AnimatedBuilder(
@@ -283,12 +283,12 @@ class _GlitterState extends State<Glitter> with TickerProviderStateMixin {
     return Scaffold(
       body: Center(
           child: Container(
-        height: _height,
-        width: _width,
-        color: Colors.pink[100],
-        // 10000 is a bad idea!
-        child: Stack(children: _createGlitterPieces(600)),
-      )),
+            height: _height,
+            width: _width,
+            color: Colors.pink[100],
+            // 10000 is a bad idea!
+            child: Stack(children: _createGlitterPieces(600)),
+          )),
     );
   }
 }
