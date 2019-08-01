@@ -1,6 +1,6 @@
 # glitter
 
-This is a project coded during The Boring Show!
+This is a project coded during [The Boring Development Show, Episode 27](https://youtu.be/OTwIfUFZmVw?list=PLjxrf2q8roU3ahJVrSgAnPjzkpGmL9Czl) with [@redbrogdon](https://github.com/RedBrogdon)!
 
 The reference image is located here: https://giphy.com/gifs/pink-5K5oXc0CD7ghG
 
